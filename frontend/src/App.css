@@ -1,0 +1,368 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8fafc;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2rem;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 1.875rem;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 480px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  color: black;
+}
+
+input, select {
+  padding: 0.75rem 1rem;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.2s ease;
+  background-color: #f8fafc;
+  color: black;
+}
+
+input:focus, select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  outline: none;
+  background-color: white;
+}
+
+button {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+
+
+.challenge-item button {
+  margin-left: auto;
+}
+
+
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.dashboard-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.dashboard-content > div {
+  background: white;
+  padding: 1.75rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.expense-item {
+  background: white;
+  padding: 1rem 1.25rem;
+  margin: 0.75rem 0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease;
+}
+
+.expense-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.chart-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  margin: 2rem auto;
+  max-width: 700px;
+}
+
+table {
+  width: 100%;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+th {
+  background: #f1f5f9;
+  padding: 1rem 1.25rem;
+  text-align: left;
+  font-weight: 600;
+  color: #475569;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+td {
+  padding: 1rem 1.25rem;
+  border-top: 1px solid #e2e8f0;
+  color: #334155;
+}
+
+tr:hover td {
+  background: #f8fafc;
+}
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  text-align: center;
+}
+
+.auth-container h1 {
+  margin-bottom: 1.5rem;
+  color: #1e293b;
+}
+
+.auth-container p {
+  margin-bottom: 2rem;
+  color: #64748b;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 1.125rem;
+  color: #3b82f6;
+}
+
+/* Improved button variants */
+.small-button {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.medium-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
+}
+
+/* Status indicators */
+.completed {
+  background-color: #22c55e;
+}
+
+.completed:hover {
+  background-color: #16a34a;
+}
+
+.name-form {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  align-items: center;
+}
+
+.name-form input {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ffffff3d;
+  background: #ffffff1a;
+  color: white;
+  font-size: 1rem;
+  min-width: 200px;
+}
+
+.name-form input::placeholder {
+  color: #ffffff8a;
+}
+
+.dashboard-header p {
+  font-size: 1.2rem;
+  color: #e2e8f0;
+  margin-top: 0.5rem;
+}
+.welcome-message {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.edit-name-button {
+  background: none;
+  border: none;
+  color: #ffffff8a;
+  cursor: pointer;
+  padding: 0.25rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.edit-name-button:hover {
+  opacity: 1;
+  background: none;
+}
+
+.edit-name-button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* ...existing styles... */
+
+.failed-challenge-message {
+  background-color: #fee2e2;
+  color: #dc2626;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+  border: 1px solid #fecaca;
+  font-weight: 500;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.challenge-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.challenge-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: white;
+  border-radius: 10px;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.challenge-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.challenge-text {
+  flex: 1;
+  margin-right: 1rem;
+  color: #1e293b;
+}
+.server-message {
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+  font-weight: 500;
+  animation: slideIn 0.3s ease-out;
+}
+
+.success-message {
+  background-color: #dcfce7;
+  color: #16a34a;
+  border: 1px solid #bbf7d0;
+}
+
+.error-message {
+  background-color: #fee2e2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+}
+
+/* Add to App.css */
+.header-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.dashboard-button {
+  background: #3b82f6;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.dashboard-button:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
