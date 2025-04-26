@@ -23,7 +23,7 @@ const ExpenseProvider = ({ children }) => {
   useEffect(() => {
     const savedEmail = localStorage.getItem('userEmail');
     if (savedEmail) {
-      fetch(`${API_URL}/api/users/${savedEmail}`)
+      fetch(`http://localhost:5000/api/users/${savedEmail}`)
         .then(response => response.json())
         .then(data => {
           if (data.success) {

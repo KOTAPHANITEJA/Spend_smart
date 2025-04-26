@@ -5,17 +5,9 @@
   "scripts": {
     "server": "nodemon backend/server.js",
     "client": "cd frontend && npm run dev",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "install-client": "cd frontend && npm install",
-    "install-server": "cd backend && npm install",
-    "postinstall": "npm run install-server",
-    "build": "cd frontend && npm run build",
-    "start": "node backend/server.js"
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "type": "module",
-  "engines": {
-    "node": ">=18.0.0"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
