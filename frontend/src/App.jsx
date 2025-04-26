@@ -4,6 +4,7 @@ import ExpenseProvider from './context/ExpenseContext';
 import Dashboard from './pages/Dashboard';
 import Home from './pages/Home';
 import Challenges from './pages/Challenges';
+import About from './pages/About';
 import './App.css';
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/challenges" element={<Challenges />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </div>
     </ExpenseProvider>

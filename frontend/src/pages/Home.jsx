@@ -195,6 +195,9 @@ const Home = () => {
           <Link to="/dashboard" className="dashboard-button">
             Add New Expense
           </Link>
+          <Link to="/about" className="dashboard-button">
+            About Us
+          </Link>
         </div>
       </header>
 
