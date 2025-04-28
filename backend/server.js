@@ -16,3 +16,10 @@ app.listen(5000, () => {
     connectDB();
     console.log('Server is running on http://localhost:5000');
 });
+
+const port = process.env.PORT || 5000;
+
+app.listen(port, () => {
+    connectDB();
+    console.log(`Server is running on port ${port}`);
+});

@@ -16,6 +16,7 @@ const Home = () => {
   const [showNameInput, setShowNameInput] = useState(true);
   const [userEmail, setUserEmail] = useState('');
   const [isEditing, setIsEditing] = useState(false);
+  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 
   const categories = [
     'Food', 'Transport', 'Books', 'Clothing', 'Electronics', 
@@ -28,7 +29,7 @@ const Home = () => {
   const handleIncomeSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://localhost:5000/api/users/${userEmail}`, {
+      const response = await fetch(`${API_URL}/api/users/${userEmail}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -55,7 +56,7 @@ const Home = () => {
   const handleNameSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5000/api/users', {
+      const response = await fetch(`${API_URL}/api/users`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -97,7 +98,7 @@ const Home = () => {
   useEffect(() => {
     const savedEmail = localStorage.getItem('userEmail');
     if (savedEmail) {
-      fetch(`http://localhost:5000/api/users/${savedEmail}`)
+      fetch(`${API_URL}/api/users/${savedEmail}`)
         .then(response => response.json())
         .then(data => {
           if (data.success) {
