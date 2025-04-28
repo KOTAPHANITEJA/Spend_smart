@@ -5,7 +5,9 @@
   "scripts": {
     "server": "nodemon backend/server.js",
     "client": "cd frontend && npm run dev",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "cd frontend && npm install && npm run build",
+    "start": "cd backend && node server.js"
   },
   "type": "module",
   "keywords": [],
