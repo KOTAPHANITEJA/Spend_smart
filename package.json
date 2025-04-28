@@ -6,8 +6,11 @@
     "server": "nodemon backend/server.js",
     "client": "cd frontend && npm run dev",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "cd frontend && npm install && npm run build",
-    "start": "cd backend && node server.js"
+    "install-client": "cd frontend && npm install",
+    "install-server": "cd backend && npm install",
+    "postinstall": "npm run install-client && npm run install-server",
+    "build": "cd frontend && npm run build",
+    "start": "node backend/server.js"
   },
   "type": "module",
   "keywords": [],
