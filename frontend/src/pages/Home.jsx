@@ -196,7 +196,7 @@ import React, { useContext, useState, useEffect } from 'react';
              Add New Expense
            </Link>
            <Link to="/about" className="dashboard-button">
-             About Us
+             About Spend Smart
            </Link>
          </div>
        </header>

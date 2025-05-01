@@ -80,7 +80,7 @@ const About = () => {
             <p>Have questions or suggestions? We'd love to hear from you!</p>
             <div className="contact-info">
               <p>📧 Email: support@spendsmart.com</p>
-              <p>📱 Phone: +1 (555) 123-4567</p>
+              <p>📱 Phone: +91 8341134293</p>
               <p>🌐 Follow us on social media for tips and updates</p>
             </div>
           </div>
