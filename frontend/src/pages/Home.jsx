@@ -274,17 +274,35 @@ import React, { useContext, useState, useEffect } from 'react';
            </table>
  
            {overLimitCategories.length > 0 && (
-             <div className="over-limit-message">
-               <h4>Budget Alert:</h4>
-               <ul>
-                 {overLimitCategories.map((category, index) => (
-                   <li key={index}>
-                     {category} has exceeded its limit by ₹{Math.abs(getRemainingAmount(category))}
-                   </li>
-                 ))}
-               </ul>
-             </div>
-           )}
+  <div 
+    className="over-limit-message" 
+    style={{
+      backgroundColor: '#fee2e2',
+      color: '#dc2626',
+      padding: '1rem',
+      borderRadius: '8px',
+      margin: '1rem 0',
+      border: '1px solid #fecaca',
+      animation: 'alertPulse 2s infinite',
+      cursor: 'pointer'
+    }}
+    onClick={() => alert(`Budget Alert!\n\n${overLimitCategories.map(category => 
+      `${category} has exceeded its limit by ₹${Math.abs(getRemainingAmount(category))}`
+    ).join('\n')}`)}
+  >
+    <h4 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+      <span role="img" aria-label="warning">⚠️</span>
+      Budget Alert!
+    </h4>
+    <ul style={{ marginTop: '0.5rem', listStyle: 'none' }}>
+      {overLimitCategories.map((category, index) => (
+        <li key={index} style={{ marginTop: '0.25rem' }}>
+          {category} has exceeded its limit by ₹{Math.abs(getRemainingAmount(category))}
+        </li>
+      ))}
+    </ul>
+  </div>
+)}
          </section>
  
          <section className="chart-section">
